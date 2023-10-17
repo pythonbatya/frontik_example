@@ -4,3 +4,4 @@ __pycache__/
 /frontik
 /http_client
 /tornado
+.venv
