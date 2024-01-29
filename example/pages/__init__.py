@@ -6,5 +6,5 @@ class Page(frontik.handler.PageHandler):
         result = await self.get_url('http://www.google.com', '/')
 
         self.json.put({
-            'res1': result.response.code,
+            'res1': result.status_code,
         })
