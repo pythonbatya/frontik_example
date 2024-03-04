@@ -10,7 +10,7 @@ authors = ['Leonid Vinogradov <l.vinogradov@hh.ru>']
 
 [tool.poetry.dependencies]
 python = '3.11.*'
-frontik = {git = 'git+ssh://git@github.com/hhru/frontik', tag = '7.1.9'}
+frontik = {git = 'git+ssh://git@github.com/hhru/frontik', tag = '7.5.1'}
 
 
 [tool.poetry.group.test.dependencies]
@@ -45,18 +45,20 @@ warn_redundant_casts = true
 warn_unused_ignores = true
 warn_unused_configs = true
 show_error_codes = true
-#disallow_any_generics = true
-#disallow_subclassing_any = true
-#warn_return_any = true
+
+disallow_any_generics = true
+disallow_subclassing_any = true
+warn_return_any = true
+disallow_untyped_defs = true
+strict = true
+#strict = false
+
 ignore_missing_imports = true
 follow_imports = 'silent'
 disallow_untyped_calls = true
-#disallow_untyped_defs = true
 disallow_incomplete_defs = true
 disallow_untyped_decorators = true
 check_untyped_defs = true
-strict = false
-#strict = true
 exclude = [
     '.*/api/2.*',
 ]
@@ -71,26 +73,26 @@ select = [
     'TD','FIX','ERA','PGH','PL','TRY','FLY','PERF','FURB','LOG','RUF',
 ]
 preview = true
-ignore = [  # первый айтем в линии хотелось бы выкинуть, остальные по делу
-    'ANN','ANN101', 'ANN002', 'ANN003', 'ANN102', 'ANN401',
-    'SLF001',
-    'PL', 'PLR6301',
-    'ARG', 'ARG002',
-    'Q',
-    'TRY',
-    'BLE',
-    'PGH',
-    'B904',
-    'B028',
-    'PYI',
-    'S',
-    'PIE',
-    'C901',
-    'N818',
-    'RUF',
-    'A',
-    'DTZ',
-]
+#ignore = [  # первый айтем в линии хотелось бы выкинуть, остальные по делу
+#    'ANN','ANN101', 'ANN002', 'ANN003', 'ANN102', 'ANN401',
+#    'SLF001',
+#    'PL', 'PLR6301',
+#    'ARG', 'ARG002',
+#    'Q',
+#    'TRY',
+#    'BLE',
+#    'PGH',
+#    'B904',
+#    'B028',
+#    'PYI',
+#    'S',
+#    'PIE',
+#    'C901',
+#    'N818',
+#    'RUF',
+#    'A',
+#    'DTZ',
+#]
 
 [tool.ruff.flake8-quotes]
 inline-quotes = 'single'
